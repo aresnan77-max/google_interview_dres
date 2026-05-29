@@ -26,6 +26,7 @@ namespace GoogleInterviewPrep
 
             if (f is "all" or "arrays")       TestArrays();
             if (f is "all" or "hashmaps")      TestHashMaps();
+            if (f is "all" or "linked")        TestLinkedLists();
             if (f is "all" or "stacks")        TestStacks();
             if (f is "all" or "trees")         TestTrees();
             if (f is "all" or "graphs")        TestGraphs();
@@ -65,6 +66,18 @@ namespace GoogleInterviewPrep
                 new[]{'.','6','.','.','.','.','2','8','.'},new[]{'.','.','.','4','1','9','.','.','5'},
                 new[]{'.','.','.','.','8','.','.','7','9'}};
             Assert("ValidSudoku", new ValidSudoku().IsValidSudoku(board), true);
+        }
+
+        static void TestLinkedLists()
+        {
+            Header("03 — Linked Lists");
+            Assert("ReverseList([1,2,3,4,5])", ListNode.ToArray(new ReverseLinkedList().ReverseList(ListNode.FromArray(new[]{1,2,3,4,5}))), new[]{5,4,3,2,1});
+            Assert("MergeTwoLists", ListNode.ToArray(new MergeTwoSortedLists().MergeTwoLists(ListNode.FromArray(new[]{1,2,4}), ListNode.FromArray(new[]{1,3,4}))), new[]{1,1,2,3,4,4});
+            var cycleNode = new ListNode(3); var n2 = new ListNode(2); var n3 = new ListNode(0); var n4 = new ListNode(-4);
+            cycleNode.next = n2; n2.next = n3; n3.next = n4; n4.next = n2;
+            Assert("HasCycle(cycle)", new LinkedListCycle().HasCycle(cycleNode), true);
+            Assert("HasCycle(no cycle)", new LinkedListCycle().HasCycle(ListNode.FromArray(new[]{1,2,3})), false);
+            Assert("RemoveNthFromEnd([1,2,3,4,5],2)", ListNode.ToArray(new RemoveNthFromEnd().RemoveNthFromEndOfList(ListNode.FromArray(new[]{1,2,3,4,5}), 2)), new[]{1,2,3,5});
         }
 
         static void TestStacks()
@@ -108,6 +121,11 @@ namespace GoogleInterviewPrep
             Assert("WordSearch ABCCED", new WordSearch().Exist(new[]{
                 new[]{'A','B','C','E'},new[]{'S','F','C','S'},new[]{'A','D','E','E'}}, "ABCCED"), true);
             Assert("ConnectedComponents", new NumberOfConnectedComponents().CountComponents(5, new[]{new[]{0,1},new[]{1,2},new[]{3,4}}), 2);
+            var gn1 = new GraphNode(1); var gn2 = new GraphNode(2);
+            gn1.neighbors = new List<GraphNode>{gn2}; gn2.neighbors = new List<GraphNode>{gn1};
+            var cloned = new CloneGraph().Clone(gn1)!;
+            Assert("CloneGraph val", cloned.val, 1);
+            Assert("CloneGraph is deep copy", !ReferenceEquals(gn1, cloned), true);
         }
 
         static void TestDP()

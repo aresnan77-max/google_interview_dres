@@ -22,19 +22,47 @@ A Developer Relations Engineer sits at the intersection of **software engineerin
 ## 🚀 Quick Start
 
 ```bash
-# Build & run all 48 LeetCode solution tests
+# Build & run the 50 core LeetCode smoke tests (console runner)
 dotnet run
 
-# Run specific category
-dotnet run -- arrays          # Arrays & Strings (8 problems)
-dotnet run -- hashmaps        # HashMaps & Sets (4 problems)
-dotnet run -- stacks          # Stacks & Queues (4 problems)
-dotnet run -- trees           # Trees (6 problems)
-dotnet run -- graphs          # Graphs (5 problems)
-dotnet run -- dp              # Dynamic Programming (7 problems)
-dotnet run -- heaps           # Heaps & Priority Queues (4 problems)
-dotnet run -- backtracking    # Backtracking (4 problems)
-dotnet run -- design          # Design Problems (2 problems)
+# Run specific category smoke tests
+dotnet run -- arrays          # Arrays & Strings (13 problems)
+dotnet run -- hashmaps        # HashMaps & Sets (7 problems)
+dotnet run -- linked          # Linked Lists (7 problems)
+dotnet run -- stacks          # Stacks & Queues (7 problems)
+dotnet run -- trees           # Trees (10 problems)
+dotnet run -- graphs          # Graphs (8 problems)
+dotnet run -- dp              # Dynamic Programming (11 problems)
+dotnet run -- heaps           # Heaps & Priority Queues (6 problems)
+dotnet run -- backtracking    # Backtracking (7 problems)
+dotnet run -- design          # Design Problems (4 problems)
+```
+
+> 80 LeetCode problems are implemented across the 10 categories.
+> The xUnit test project under `tests/` exercises every problem (≈150 cases)
+> and is the recommended way to run/verify individual solutions in Rider.
+
+### 🧪 在 Rider 中运行单元测试
+
+本项目包含 xUnit 测试项目，支持在 Rider 中独立运行每一个测试用例：
+
+1. 用 Rider 打开 `GoogleInterviewPrep.sln`
+2. 在 Solution Explorer 中展开 `GoogleInterviewPrep.Tests`
+3. 每个测试文件对应一个算法分类，每个 `[Fact]` / `[Theory]` 方法都可以单独运行
+4. 右键点击测试方法 → Run 或使用左侧的绿色运行按钮
+
+```
+tests/GoogleInterviewPrep.Tests/
+├── ArraysStringsTests.cs        # 数组与字符串
+├── HashMapsTests.cs             # 哈希表与集合
+├── LinkedListsTests.cs          # 链表
+├── StacksQueuesTests.cs         # 栈与队列
+├── TreesTests.cs                # 二叉树
+├── GraphsTests.cs               # 图
+├── DynamicProgrammingTests.cs   # 动态规划
+├── HeapsTests.cs                # 堆与优先队列
+├── BacktrackingTests.cs         # 回溯
+└── DesignTests.cs               # 设计题
 ```
 
 > **Requirements:** .NET 8.0 SDK or later. Download from https://dotnet.microsoft.com/download
@@ -48,8 +76,10 @@ google-dev-study-plan/
 │
 ├── README.md                              # This file
 ├── STUDY_PLAN.md                          # Detailed 14-day study calendar
+├── GoogleInterviewPrep.sln                # Solution file (open in Rider)
 ├── GoogleInterviewPrep.csproj             # C# console project
-├── Program.cs                             # Test runner for all solutions
+├── Program.cs                             # Console test runner for all solutions
+├── global.json                            # SDK version pinning
 │
 ├── 01-leetcode-csharp/                    # ── Algorithm & DS Practice ──
 │   ├── README.md                          # Problem index & progress tracker
@@ -82,6 +112,19 @@ google-dev-study-plan/
 │   ├── 04-APIDesign.md                    # REST/gRPC design principles
 │   └── 05-Portfolio.md                    # Building your public profile
 │
+├── tests/GoogleInterviewPrep.Tests/       # ── xUnit Test Project (Rider) ──
+│   ├── GoogleInterviewPrep.Tests.csproj   # xUnit test project
+│   ├── ArraysStringsTests.cs              # 数组与字符串测试
+│   ├── HashMapsTests.cs                   # 哈希表测试
+│   ├── LinkedListsTests.cs               # 链表测试
+│   ├── StacksQueuesTests.cs              # 栈与队列测试
+│   ├── TreesTests.cs                     # 树测试
+│   ├── GraphsTests.cs                    # 图测试
+│   ├── DynamicProgrammingTests.cs        # 动态规划测试
+│   ├── HeapsTests.cs                     # 堆测试
+│   ├── BacktrackingTests.cs              # 回溯测试
+│   └── DesignTests.cs                    # 设计题测试
+│
 └── resources/                             # ── Supplementary Resources ──
     ├── cheatsheets/
     │   ├── AlgorithmComplexity.md          # Big-O reference card
@@ -96,7 +139,7 @@ google-dev-study-plan/
 
 ---
 
-## 📊 48 LeetCode Problems Covered
+## 📊 50 LeetCode Problems Covered
 
 | # | Category | Count | Key Patterns |
 |---|----------|-------|-------------|
@@ -105,12 +148,12 @@ google-dev-study-plan/
 | 03 | Linked Lists | 4 | Fast/Slow Pointers, Dummy Head, Gap Technique |
 | 04 | Stacks & Queues | 4 | Monotonic Stack, Auxiliary Stack |
 | 05 | Trees | 6 | DFS (Pre/In/Post), BFS, BST Bounds |
-| 06 | Graphs | 5 | BFS/DFS Grid, Topological Sort, Union-Find |
+| 06 | Graphs | 6 | BFS/DFS Grid, Topological Sort, Union-Find |
 | 07 | Dynamic Programming | 7 | 1D/2D DP, Knapsack, Binary Search Optimization |
 | 08 | Heaps & Priority Queues | 4 | Min/Max Heap, Two Heaps, QuickSelect |
 | 09 | Backtracking | 4 | Include/Exclude, Constraint Pruning |
 | 10 | Design | 2 | HashMap+DLL, Prefix Tree |
-| | **Total** | **48** | |
+| | **Total** | **50** | |
 
 ---
 
