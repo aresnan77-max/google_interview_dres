@@ -1,0 +1,45 @@
+tests/GoogleInterviewPrep.Tests/StacksQueuesTests.cs
+  fd7ca898fbf6011d 1-2,11-25,27-39,41-51,53-65,67-73,75-80,82-87,89-94,96-100,102-106,108-112,114-122,124-135,137-141,143-157
+tests/GoogleInterviewPrep.Tests/ArraysStringsTests.cs
+  fd7ca898fbf6011d 136,138,169-177,179-187,189-197,199-208,210-224
+tests/GoogleInterviewPrep.Tests/LinkedListsTests.cs
+  fd7ca898fbf6011d 119-128,130-137,139-149,151-159,161-169
+tests/GoogleInterviewPrep.Tests/GoogleInterviewPrep.Tests.csproj
+  fd7ca898fbf6011d 1,3-11,13-24,26-28,30
+tests/GoogleInterviewPrep.Tests/DynamicProgrammingTests.cs
+  fd7ca898fbf6011d 148-156,158-167,169-174,179-181,183-188,190-199
+tests/GoogleInterviewPrep.Tests/GraphsTests.cs
+  fd7ca898fbf6011d 1-2,11-27,29-34,36-40,42-50,52-56,61-63,65-68,73-75,77-80,83-85,87-92,94-98,100-104,106-112,114-127,129-135,137-141,145-147,149-152,156-158,160-163,167-169,171-177,179-184,186-190,192-203,205-215,217-222,224-235,237-248
+01-leetcode-csharp/01-arrays-strings/Solutions.cs
+  fd7ca898fbf6011d 150-166
+tests/GoogleInterviewPrep.Tests/TreesTests.cs
+  fd7ca898fbf6011d 1-2,11-19,21-25,27-31,33-38,40-50,52-57,59-65,67-73,75-80,82-86,88-94,96-103,105-112,114-123,125-131,133-143,145-151,153-158,160-164,166-171,173-186,191-198,200-205,207-216,218-225,227-234
+tests/GoogleInterviewPrep.Tests/BacktrackingTests.cs
+  fd7ca898fbf6011d 126-134,136-140,142-150,152-157,162-170
+tests/GoogleInterviewPrep.Tests/HashMapsTests.cs
+  fd7ca898fbf6011d 1-2,11-19,21-26,28-33,35-40,42-46,48-52,54-58,60-68,70-75,77-81,91-93,95-98,108-110,112-120,122-130,132-141
+tests/GoogleInterviewPrep.Tests/DesignTests.cs
+  fd7ca898fbf6011d 1-2,11-27,29-40,42-47,49-57,59-68,70-78,80-88,90-97,99-114,116-125,128-129,131-145
+tests/GoogleInterviewPrep.Tests/HeapsTests.cs
+  fd7ca898fbf6011d 1-2,6-8,12-19,21-25,27-31,33-37,39-50,52-57,59-65,67-76,78-85,87-97,99-109,111-123,125-135,137-143,145-163,165-166,170-174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.18",
+  "base_commit_sha": "30cfe88223ac2c47341e9c6d7c0aec55f7d16a1d",
+  "prompts": {
+    "fd7ca898fbf6011d": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "e12b78fa-9911-40d5-9bdf-449150ba0520",
+        "model": "copilot/claude-opus-4.6"
+      },
+      "human_author": "lijn14",
+      "messages": [],
+      "total_additions": 2190,
+      "total_deletions": 26,
+      "accepted_lines": 1134,
+      "overriden_lines": 170
+    }
+  }
+}
